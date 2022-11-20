@@ -1,0 +1,88 @@
+.background {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background: url("../images/plans-background.jpg") center / cover;
+  z-index: -1;
+  filter: grayscale(40%);
+}
+.main-content {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 5%;
+}
+
+.main-content__plan {
+  border: 5px solid #0e4f1f;
+  width: 80%;
+  position: relative;
+  margin: 16px;
+  background-color: rgb(188 234 213/0.95);
+}
+
+.main-content__plan:hover {
+  border-color: #ff5454;
+  background-color: #def5e5;
+  box-shadow: 2px 2px 2px 4px rgba(0 0 0 / 0.5);
+}
+
+.plan-link {
+  padding: 1rem;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.plan-title {
+  color: #000;
+  margin: 1rem;
+}
+
+.plan-badge {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 1.2rem;
+  background-color: #ff5454;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.plan-info {
+  color: #73777b;
+  margin: 1rem;
+}
+
+.plan-description {
+  border: 1px solid black;
+  padding: 1rem;
+  margin: 2rem;
+  color: #000;
+  background-color: #fff;
+}
+
+/* style the highlighted plan  */
+
+.plan__highlight {
+  background-color: rgb(14 79 31/0.95);
+}
+
+.plan__highlight .plan-title {
+  color: #fff;
+}
+
+.plan__highlight .plan-info {
+  color: #ccc;
+}
+
+.plan__highlight:hover {
+  background-color: #4aa96c;
+}
+
+/* style the free plan*/
+
+#free {
+  align-self: flex-end;
+  text-align: end;
+}
