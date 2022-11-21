@@ -2,7 +2,7 @@
 
 #product-overview {
   /* background: #ff1b68; */
-  height: 55vh;
+  height: 33vh;
   background: linear-gradient(to top, rgba(80 68 18 / 0.6), transparent),
     url("./images/freedom.jpg") left 0% bottom 75% / cover no-repeat border-box,
     #ff1b68;
@@ -29,16 +29,14 @@
 /* Plans section  */
 .plans-container {
   display: grid;
-  grid-auto-flow: column;
-  justify-content: space-evenly;
+  /* justify-content: space-evenly; */
   align-items: center;
   flex-wrap: wrap;
+  grid-auto-flow: row;
 }
-@media screen and (width<800px) {
-  .plans-container {
-    grid-auto-flow: row;
-  }
-}
+/* @media screen and (width<800px) {
+  
+} */
 .plan {
   /* display: inline-block; */
   /* width: 30%; */
@@ -46,8 +44,8 @@
   background-color: #1fff03;
   text-align: center;
   padding: 1rem;
-  margin: 0.8rem;
-  vertical-align: middle;
+  margin: 0.8rem 0;
+  /* vertical-align: middle; */
   /* flex-basis: 30%; */
 }
 
@@ -63,7 +61,7 @@
 .plan--highlight {
   background-color: #19b84c;
   color: #fff;
-  box-shadow: 2px 2px 2px 2px rgb(0 0 0 /0.5);
+  /* box-shadow: 2px 2px 2px 2px rgb(0 0 0 /0.5); */
 }
 .plan__anotation {
   background-color: #fff;
@@ -178,4 +176,19 @@
 .modal__action--negative:active {
   background: #ff5454;
   border-color: #ff5454;
+}
+
+/* Media Queries  */
+
+@media (width> 40rem) {
+  #product-overview {
+    height: 55vh;
+  }
+  #product-overview h1 {
+    font-size: 3rem;
+  }
+  .plans-container {
+    grid-auto-flow: column;
+    justify-content: space-evenly;
+  }
 }

@@ -1,4 +1,4 @@
-const backdrop = document.querySelector(".backdrop");
+// const backdrop = document.querySelector(".backdrop");
 const modal = document.querySelector(".modal");
 const planButtons = document.querySelectorAll(".plan .button");
 const modalNoButton = modal.querySelector(".modal__action--negative");
