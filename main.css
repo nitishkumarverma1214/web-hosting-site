@@ -105,10 +105,12 @@
 .key-features__items {
   list-style: none;
   display: flex;
+  flex-direction: column;
+  gap: 2rem;
   flex-wrap: wrap;
-  gap: 10%;
   justify-content: space-evenly;
   align-items: center;
+  padding: 0;
 }
 
 .key-feature__image {
@@ -134,8 +136,8 @@
   display: none;
   z-index: 200;
   top: 20%;
-  left: 30%;
-  width: 40%;
+  left: 10%;
+  width: 80%;
   background: white;
   padding: 1rem;
   border: 1px solid #ccc;
@@ -190,5 +192,20 @@
   .plans-container {
     grid-auto-flow: column;
     justify-content: space-evenly;
+  }
+  .plan--highlight {
+    box-shadow: 2px 2px 2px 2px rgb(0 0 0 /0.5);
+  }
+  .key-features__items {
+    flex-direction: row;
+    align-items: baseline;
+  }
+  .key-feature {
+    max-width: 15rem;
+    text-align: center;
+  }
+  .modal {
+    max-width: 40vw;
+    left: 30%;
   }
 }
