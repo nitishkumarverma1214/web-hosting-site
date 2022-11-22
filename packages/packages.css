@@ -10,7 +10,7 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  top: 5%;
+  top: 10%;
 }
 
 .main-content__plan {
@@ -43,7 +43,7 @@
   position: absolute;
   right: 0;
   top: 0;
-  margin: 1.2rem;
+  margin: 0.3rem;
   background-color: #ff5454;
   padding: 0.5rem;
   font-size: 1rem;
@@ -57,7 +57,7 @@
 .plan-description {
   border: 1px solid black;
   padding: 1rem;
-  margin: 2rem;
+
   color: #000;
   background-color: #fff;
 }
@@ -85,4 +85,13 @@
 #free {
   align-self: flex-end;
   text-align: end;
+}
+
+@media screen and (width>40rem) {
+  .plan-description {
+    margin: 0;
+  }
+  .plan-badge {
+    margin: 1.2rem;
+  }
 }
