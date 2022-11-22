@@ -6,6 +6,9 @@
   z-index: -1;
   filter: grayscale(40%);
 }
+.container {
+  gap: 1rem;
+}
 .main-content {
   display: flex;
   flex-direction: column;
@@ -17,7 +20,7 @@
   border: 5px solid #0e4f1f;
   width: 80%;
   position: relative;
-  margin: 16px;
+  margin: 1rem;
   background-color: rgb(188 234 213/0.95);
 }
 
@@ -80,6 +83,9 @@
   background-color: #4aa96c;
 }
 
+#plus .plan-title {
+  margin-top: 2rem;
+}
 /* style the free plan*/
 
 #free {
@@ -93,5 +99,9 @@
   }
   .plan-badge {
     margin: 1.2rem;
+  }
+  .main-content__plan {
+    margin: 1rem 0;
+    max-width: 40rem;
   }
 }
