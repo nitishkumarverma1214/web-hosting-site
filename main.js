@@ -5,13 +5,13 @@ const modalNoButton = modal.querySelector(".modal__action--negative");
 
 const closeModal = () => {
   backdrop.style.display = "none";
-  modal.style.display = "none";
+  modal.classList.remove("modal--open");
 };
 
 planButtons.forEach((planButton) => {
   planButton.addEventListener("click", () => {
     backdrop.style.display = "revert";
-    modal.style.display = "revert";
+    modal.classList.add("modal--open");
   });
 });
 

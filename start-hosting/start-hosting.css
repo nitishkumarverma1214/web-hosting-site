@@ -14,25 +14,24 @@
   border-radius: 0.5rem;
   margin: 1rem 0.5rem;
   max-width: 30rem;
+  display: grid;
 }
 .signup-page input,
 .signup-page label {
-  display: block;
   margin: 0.5rem;
 }
 .signup-page select {
   font-weight: bold;
   padding: 0.25rem;
   font-family: inherit;
+  margin: 0 1rem;
 }
 .signup-page label {
   font-weight: bold;
 }
-.signup-page label[for="title"] {
-  display: inline-block;
-}
+
 .signup-page input:not([type="checkbox"]) {
-  padding: 0.25rem;
+  padding: 0.35rem;
   border-radius: 0.5rem;
   width: 95%;
   font-family: inherit;
@@ -45,12 +44,6 @@
   border: 2px solid #2ddf5c;
 }
 
-.signup-page label[id="agree-terms"],
-.signup-page label[for="agree-terms"] {
-  display: inline-block;
-  width: auto;
-}
-
 /* Custom checbox  */
 
 .signup-page input[type="checkbox"] {
@@ -60,15 +53,14 @@
   width: 1rem;
   height: 1rem;
   border: 2px solid #ccc;
-  display: inline-block;
-  vertical-align: bottom;
+  border-radius: 50%;
+  vertical-align: middle;
 }
 .signup-page input[type="checkbox"]:checked {
   background-color: #2ddf5c;
 }
 .signup-page button[type="submit"] {
-  margin: 0 auto;
-  display: block;
+  justify-self: center;
 }
 
 /* Form validation  */
@@ -81,7 +73,15 @@
 
 @media screen and (width>40rem) {
   .signup-page form {
-    max-width: 30rem;
-    margin: 1rem auto;
+    margin: 5rem auto;
+    grid-template-columns: 10rem auto;
+  }
+
+  .signup-page .agree-terms-conatiner {
+    grid-column: span 2;
+    margin: 1rem;
+  }
+  .signup-page button[type="submit"] {
+    grid-column: span 2;
   }
 }

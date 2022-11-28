@@ -7,7 +7,6 @@ const backdrop = document.querySelector(".backdrop");
 
 function mobileNavClose() {
   backdrop.style.display = "none";
-  mobileNav.classList.add("mobile-nav--close");
   mobileNav.classList.remove("mobile-nav--open");
 
   hamBarLast.style.visibility = "visible";
@@ -20,10 +19,8 @@ function mobileNavClose() {
 }
 
 hambergerButton.addEventListener("click", () => {
-  if (getComputedStyle(mobileNav).visibility === "hidden") {
-    // mobileNav.style.display = "block";
+  if (!mobileNav.classList.contains("mobile-nav--open")) {
     backdrop.style.display = "revert";
-    mobileNav.classList.remove("mobile-nav--close");
     mobileNav.classList.add("mobile-nav--open");
 
     hamBarLast.style.visibility = "hidden";
@@ -39,7 +36,6 @@ hambergerButton.addEventListener("click", () => {
     hamBarMid.style.top = "30%";
     hamBarMid.style.transition = "transform 3s ease-in-out 0s";
   } else {
-    // mobileNav.style.display = "none";
     mobileNavClose();
   }
 });

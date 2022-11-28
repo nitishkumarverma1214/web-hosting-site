@@ -22,12 +22,14 @@
   position: relative;
   margin: 1rem;
   background-color: rgb(188 234 213/0.95);
+  overflow: hidden;
 }
 
 .main-content__plan:hover {
   border-color: #ff5454;
   background-color: #def5e5;
   box-shadow: 2px 2px 2px 4px rgba(0 0 0 / 0.5);
+  animation: move-up 1s ease-out forwards;
 }
 
 .plan-link {
@@ -94,15 +96,34 @@
   text-align: end;
 }
 
+.plan-badge {
+  margin: 0;
+  transform: rotateZ(45deg) translateX(6rem) translateY(-2rem);
+  width: 20rem;
+  text-align: center;
+}
+
 @media screen and (width>40rem) {
   .plan-description {
     margin: 0;
   }
-  .plan-badge {
+  /* .plan-badge {
     margin: 1.2rem;
-  }
+  } */
   .main-content__plan {
     margin: 1rem 0;
     max-width: 40rem;
+  }
+}
+
+@keyframes move-up {
+  0% {
+    transform: translateY(0);
+  }
+  33% {
+    transform: translateY(-1.5rem);
+  }
+  100% {
+    transform: translateY(-1rem);
   }
 }
